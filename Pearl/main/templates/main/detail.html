@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> {{user.first_name}} {{user.last_name}}</h1>
+    <p>email: <b>{{user.email}}</b></p>
+    <p>Telefono: <b>{{user.phone_number}}</b></p>
+    <p>Genero: <b>{{user.gender}}</b></p>
+    {% if user.date_birth %}
+        <p>Fecha de nacimiento: {{user.date_birth}}</p>
+    {% else %}
+        <p>Fecha de nacimiento no especificada</p>
+    {% endif %}    
+{% endblock %}
+
